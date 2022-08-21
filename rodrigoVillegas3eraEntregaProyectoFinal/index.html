@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../rodrigoVillegas3eraEntregaProyectoFinal/img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="luxon.js"></script>
+    <link rel="stylesheet" href="style/estilos.css">
+    <title>BANCO CODER S.A.</title>
+</head>
+<body class="darkMode">
+    <div class="form-check form-switch switchDarkMode" >
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchDarkMode">
+        <label class="form-check-label" for="flexSwitchCheckDefault">&nbsp Dark Mode On / Off</label>
+    </div>
+    <img src="img/logo.png" class="logo">
+    <h1>¡BIENVENIDO AL SIMULADOR DE CREDITOS ON LINE DEL <b>"BANCO CODER S.A.S."</b>!</h1>
+    <hr>
+    <h3>Te sugerimos registrarte en nuestra base de datos para poder ofrecerte el mejor crédito personal del mercado hecho a tu medida. Tomará unos pocos segundos... ¡¿LO HACEMOS AHORA?!</h3>
+    <hr>
+    <form id='formulario' class="row g-2 needs-validation" novalidate>
+        <div class="col-md-3">
+            <label for="validationCustom01" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="validationCustom01">
+        </div>
+        <div class="col-md-3">
+            <label for="validationCustom02" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="validationCustom02">
+        </div>
+        <div class="col-md-2">
+            <label for="validationCustom03" class="form-label">Edad</label>
+            <input type="number" class="form-control" id="validationCustom03">
+        </div>
+        <div class="col-md-2">
+            <label for="validationCustom04" class="form-label">Documento</label>
+            <input type="number" class="form-control" id="validationCustom04">
+        </div>
+        <div class="col-md-2">
+            <label for="validationCustom05" class="form-label">Teléfono</label>
+            <input type="number" class="form-control" id="validationCustom05">
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustom06" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="validationCustom06">
+        </div>
+        <div class="col-md-8">
+            <label for="validationCustom07" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="validationCustom07">
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit" id="btn-submit">Registrarse</button>
+            <button class="btn btn-warning" type="button" id="botonSimulaTuCredito">Simular tu crédito!</button>
+        </div>
+    </form>
+    <hr>
+    <ul id="usuarios"></ul>
+    <hr>
+    <div class= "hidden" id="primeraPregunta">
+        <h3>¿Para saber cuánto ofrecerte, necesitamos primero conocer cuál es tu recibo de sueldo?</h3>
+        <input type="text" id="inputPrimeraPregunta">
+        <button class= "btn btn-info" type="button" id="botonContinuarPrimeraPregunta">Continuar</button>
+        <hr>
+        <div class="hidden" id="solvenciaMayorDoscientos">
+            <h4>Está a tu disposición un crédito de hasta <b>$1.000.000</b> para devolver en 36 cuotas fijas con un interés TNA del 53%.</h4>
+        </div>
+        <div class="hidden" id="solvenciaMenorDoscientosMayorCientoCincuenta">
+            <h4>Está a tu disposición un crédito de hasta <b>$750.000</b> para devolver en 36 cuotas fijas con un interés TNA del 53%.</h4>
+        </div>
+        <div class="hidden" id="solvenciaMenorCientoCincuentaMayorCien">
+            <h4>Está a tu disposición un crédito de hasta <b>$500.000</b> para devolver en 36 cuotas fijas con un interés TNA del 53%</h4>
+        </div>
+        <div class="hidden" id="solvenciaMenorCien">
+            <h4>Lo sentimos, pero tu recibo de sueldo no nos permite otorgarte un crédito personal susceptible de ser garantizado.</h4>
+        </div>
+    </div>
+    <hr>
+    <div class="hidden" id="segundaPregunta">
+        <h3>Ahora que conocés el máximo al cual podés aplicar, por favor ingresá el monto pretendido:</h3>
+        <input type="text" id="inputSegundaPregunta">
+        <button class= "btn btn-info" type="button" id="botonContinuarSegundaPregunta">Calcular</button><hr>
+        <div class="hidden" id="solicitudMayorUnMillon">
+            <h4>Lo sentimos, pero estás aplicando a un <b>monto mayor</b> al que nuestra institución otorga en calidad de préstamo personal.</h4>
+        </div>
+        <div id="solicitudCreditoAceptada">
+        </div>
+        <hr>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
